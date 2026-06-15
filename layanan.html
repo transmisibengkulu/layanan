@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Layanan Teknisi TVRI Bengkulu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#1f2937;
+}
+
+/* HEADER */
+
+.hero{
+    background:linear-gradient(135deg,#003D8F,#0E73E4);
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.hero img{
+    width:120px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    opacity:.95;
+}
+
+/* CONTENT */
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.card h2{
+    color:#003D8F;
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    font-size:15px;
+}
+
+textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+.btn{
+    width:100%;
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:16px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#1eb857;
+}
+
+.info{
+    background:#e8f3ff;
+    border-left:5px solid #003D8F;
+    padding:15px;
+    margin-bottom:25px;
+    border-radius:8px;
+}
+
+.footer{
+    background:#003D8F;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+.footer a{
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:30px;
+}
+
+.card{
+    padding:20px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+    <!-- Ganti dengan logo TVRI Bengkulu -->
+    <img src="D:\Kerja\Layanan Transmisi Pildun\TVRIBengkuluLogo2019_OnAirScreen.png" alt="TVRI Bengkulu">
+
+    <h1>Layanan Teknisi TV Digital TVRI Bengkulu</h1>
+
+    <p>
+        Mengalami kendala menerima siaran TVRI Digital?
+        Silakan isi formulir berikut dan hubungi petugas teknisi sesuai wilayah Anda.
+    </p>
+
+</section>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="info">
+            Pastikan TV Digital atau Set Top Box (STB) Anda telah melakukan
+            scan otomatis maupun scan manual sebelum menghubungi petugas.
+        </div>
+
+        <h2>Form Pengaduan</h2>
+
+        <form id="pengaduanForm">
+
+            <div class="form-group">
+                <label>Nama</label>
+                <input type="text" id="nama" required>
+            </div>
+
+            <div class="form-group">
+                <label>Alamat</label>
+                <input type="text" id="alamat" required>
+            </div>
+
+            <div class="form-group">
+                <label>No. HP</label>
+                <input type="text" id="nohp" required>
+            </div>
+
+            <div class="form-group">
+                <label>Isi Pengaduan</label>
+                <textarea id="pengaduan" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Wilayah / PIC:</label>
+
+                    <select id="pic">
+                    <option value="" selected disabled>-- Pilih PIC Bengkulu --</option>
+
+                    <optgroup label="Area Bengkulu & Bengkulu Tengah">
+                        <option value="6281271277975">Dadan Taryana</option>
+                        <option value="6281380389871">Trisnando</option>
+                        <option value="628117312121">Nurachman</option>
+                        <option value="6285269807775">Hendra</option>
+                        <option value="6285609448767">Sizubad</option>
+
+                    </optgroup>
+
+                    <optgroup label="Curup">
+                        <option value="6285366387007">Aris Kurniawan</option>
+                        <option value="6289652910780">Pasha Alexa</option>
+                    </optgroup>
+
+                    <optgroup label="Muko-Muko">
+                        <option value="6281991590303">Haidar</option>
+                        <option value="6283852297666">Ahmad Rafiq</option>
+                    </optgroup>
+
+                    <optgroup label="Ipuh">
+                        <option value="6282177537745">Santo Prasetia</option>
+                        <option value="628269714029">Bintang</option>
+                        <option value="6285166165046">Aditya</option>
+                    </optgroup>
+
+                    <optgroup label="Lebong">
+                        <option value="6289633667945">Arhadian</option>
+                        <option value="62895410817000">Rahmat Dempo</option>
+                    </optgroup>
+
+                </select>
+            </div>
+
+            <button type="button" class="btn" onclick="kirimWA()">
+                Kirim Pengaduan via WhatsApp
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<footer class="footer">
+
+    <h3>TVRI Bengkulu</h3>
+
+    <p>
+        Tim Teknisi Transmisi TVRI Bengkulu Siap Membantu Anda
+    </p>
+
+    <br>
+
+    <a href="#">
+        www.tvri.go.id
+    </a>
+
+</footer>
+
+<script>
+
+function kirimWA(){
+
+    const nama = document.getElementById('nama').value;
+    const alamat = document.getElementById('alamat').value;
+    const nohp = document.getElementById('nohp').value;
+    const pengaduan = document.getElementById('pengaduan').value;
+    const nomorPIC = document.getElementById('pic').value;
+
+    if(!nama || !alamat || !nohp || !pengaduan){
+        alert('Silakan lengkapi seluruh form terlebih dahulu.');
+        return;
+    }
+
+    const pesan =
+`*PENGADUAN SIARAN TVRI DIGITAL*
+
+Nama : ${nama}
+Alamat : ${alamat}
+No. HP : ${nohp}
+
+Isi Pengaduan :
+${pengaduan}`;
+
+    const url =
+`https://wa.me/${nomorPIC}?text=${encodeURIComponent(pesan)}`;
+
+    window.open(url,'_blank');
+}
+
+</script>
+
+</body>
+</html>
